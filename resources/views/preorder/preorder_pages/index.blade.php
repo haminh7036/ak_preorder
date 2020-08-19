@@ -170,7 +170,7 @@
                             <div class="px-3 text-center">
                                 <h5 class="text-uppercase">{{$product->Product_Name}}</h5>
                                 @if($product->Reduced_Price == 0)
-                                    <h3 class="text-danger font-weight-bold">{{number_format($product->Price)}} <sup>đ</sup> </h3>
+                                    <h3 class="text-danger font-weight-bold">>Giá dự kiến: {{number_format($product->Price)}} <sup>đ</sup> </h3>
                                 @else
                                     <span class="text-uppercase">Giá dự kiến:</span> {{number_format($product->Price)}}<sup>đ</sup>
                                     <h3 class="text-danger font-weight-bold"> <span class="text-uppercase text-dark h5">Tiền cọc:</span>{{number_format($product->Deposit)}} <sup>đ</sup> </h3>
