@@ -86,11 +86,16 @@ class PreOrderMainController extends Controller
             }
             $product->save();
         }
-        return(redirect('/preorder'));
+        return(redirect(route('preorder_store_success',['status'=>'success','cid'=> $request['_token']])));
     }
 
-    public function success(){
-        return view('preorder.preorder_pages.success');
+    public function success(Request $request){
+        if($request['status'] == 'success' && !empty($request['cid'])){
+            return view('preorder.status_pages.success');
+        }
+        else{
+            abort(404);
+        }
     }
 
 }

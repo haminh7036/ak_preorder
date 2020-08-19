@@ -21,6 +21,7 @@ Route::group(['namespace'=>'PreOrder'], function (){
     Route::post('/cities/getProvince','PreOrderMainController@province')->name('province');
     Route::post('/cities/getShops','PreOrderMainController@shops')->name('shops');
     Route::post('/preorder/store/{slug}','PreOrderMainController@comfirm_order')->name('store_pre_order');
+    Route::get('/order-confirmed', 'PreOrderMainController@success')->name('preorder_store_success');
 });
 Route::post('/store-registrant', 'LandingPageController@store')->name('store_registrant');
 Route::prefix('pre-order-admin')->group(function () {

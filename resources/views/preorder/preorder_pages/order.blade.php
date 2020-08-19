@@ -94,9 +94,10 @@
                                     <div>
                                         <input class="form-control d-inline" style="width:180px" type="text" name="Name" placeholder="Họ và tên (Bắt buộc)">
                                         <input class="form-control d-inline" style="width:180px" type="text" name="Phone_Number" placeholder="Số điện thoại (Bắt buộc)">
+                                        <br>
                                         {!! $errors->first('Name', '<p class="d-inline text-danger">Vui lòng nhập rõ họ và tên</p>')!!}
                                         <br>
-                                        {!! $errors->first('Phone_Number', '<p class="d-inline text-danger">Vui lòng số điện thoại </p>')!!}
+                                        {!! $errors->first('Phone_Number', '<p class="d-inline text-danger">Vui lòng nhập số điện thoại </p>')!!}
                                         <div class="form-group" style="width:60%">
                                             <textarea class="mt-2 form-control"  name="Other_request" placeholder="Yêu cầu khác (Không bắt buộc)" rows="3"></textarea>
                                         </div>
@@ -153,17 +154,20 @@
                                 <td></td>
                                 <td>
                                     @if($product->status == 0)
-                                        <button class="btn btn-warning text-white rounded w-25 my-4" type="submit">HOÀN TẤT</button>
+                                        <button id="store_order" class="btn btn-warning text-white rounded w-25 my-4" type="submit">HOÀN TẤT</button>
                                     @else
                                         <i style="font-size:12px" class="text-danger">*Đơn hàng đặt trước đã đủ số lượng hẹn quý khách vào lần sau, Cảm ơn quý khách đã quan tâm đến sản phẩm!</i>
                                         <br/>
-                                        <button disabled class="bg-secondary btn btn-disabled w-25 text-uppercase text-white my-3">HOÀN TẤT</button>
+                                        <button id="store_order" disabled class="bg-secondary btn btn-disabled w-25 text-uppercase text-white my-3">HOÀN TẤT</button>
                                     @endif
                                 </td>
                             </tr>
                         </table>
                         {!! Form::close() !!}
-                                               
+                        <script>
+
+
+                        </script>
                 </div>
             </div>
         </div>

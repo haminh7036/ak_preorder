@@ -95,10 +95,11 @@ $(document).ready(function(){
 
 $('input[name="Payment"]').change(function(event){
     if(event.currentTarget.value === 'Đặt cọc tại cửa hàng'){
-        
+        $('#store_order').prop('disabled', true);
         $('#block_test').show()
     }
     else{
+        $('#store_order').prop('disabled', false);
         $('#block_test').hide()
     }
 })
@@ -140,6 +141,46 @@ $('#wards').change(function(event){
         $('#detail_address').html('').append(html1);
     });
 })
+    let city=0;
+    let ward=0;
+    let detail=0;
+    const checkButton = (a,b,c) => {
+        if(a === b && b === c){
+            $('#store_order').prop('disabled', false);
+        }
+        else{
+            $('#store_order').prop('disabled', true);
+        }
+    }
+    $('#city').change(function(event){
+        if($('#city').val() != ''){
+            city = 1;
+        }
+        else{
+            city = 0;
+        }
+        checkButton(city,ward,detail)
+    })
+    $('#wards').change(function(event){
+        if($('#city').val() != ''){
+            ward = 1;
+        }
+        else{
+            ward = 0;
+        }
+        checkButton(city,ward,detail)
+
+    })
+    $('#detail_address').change(function(event){
+        if($('#city').val() != ''){
+            detail = 1;
+        }
+        else{
+            detail = 0;
+        }
+        checkButton(city,ward,detail)
+    })
+
 // Sidebar and Header
 require('jquery-slimscroll');
 require('./vendor/waves');
