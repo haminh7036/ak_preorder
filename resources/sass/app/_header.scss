@@ -24,6 +24,7 @@
             display: none;
         }
 
+
         .navbar-casio__center {
             .navbar-casio__center__brand {
                 display: flex;
@@ -47,7 +48,13 @@
                 display: none;
             }
         }
-
+        .navbar-casio__navigation {
+            .lists {
+                .navbar-casio__topbar__phone {
+                    display: block;
+                }
+            }
+        }
         /* Hidden logo */
         @media screen and (max-width: 1200px) {
             .navbar-casio__center {
@@ -320,11 +327,15 @@
 
             list-style-type: none;
             padding-left: 0;
-
+            .navbar-casio__topbar__phone {
+                display: none;
+            }
             li {
                 position: relative;
 
                 padding: 10px 15px 10px;
+
+
 
                 .navbar-casio__navigation__submenus {
                     display: flex;

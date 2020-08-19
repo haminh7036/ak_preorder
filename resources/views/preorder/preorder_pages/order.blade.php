@@ -36,7 +36,7 @@
                         {!! Form::open(['method'=>'POST','class'=>'form-horizontal','url'=>route('store_pre_order',$product->Product_Code)]) !!}
                         <table class="w-100 h-75 ">
                             <tr>
-                                <td width="25%" class="h4 font-weight-normal text-right">Giá bán</td>
+                                <td width="25%" class="h4 font-weight-normal text-right"> Giá dự kiến</td>
                                 <td class="pl-3">
                                     @if($product->Reduced_Price == 0)
                                         <span class="h3 font-weight-normal text-danger font-weight-bold">{{number_format($product->Price)}} <sup>đ</sup></span>

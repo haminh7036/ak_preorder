@@ -92,20 +92,54 @@ $(document).ready(function(){
         navText : ["<i class='mdi mdi-arrow-left' style='color: #d57b2d'></i>","<i class='mdi mdi-arrow-right' style='color: #d57b2d' ></i>"]
     });
 });
+
+$('input[name="Payment"]').change(function(event){
+    if(event.currentTarget.value === 'Đặt cọc tại cửa hàng'){
+        
+        $('#block_test').show()
+    }
+    else{
+        $('#block_test').hide()
+    }
+})
 $('#city').change(function (event) {
     provinc = $('#city').val();
     $.post('/cities/getProvince', {
         "_token": $('meta[name="csrf-token"]').attr('content'),
         "proviceId": provinc
     }).done(function (data) {
-        let html = "<option disabled selected>Quận/Huyện</option>"
-        let element = '#wards'
+        let html = "<option disabled selected>Quận/Huyện</option>";
+        let element = '#wards';
         $.each(data, function (index, value) {
-            html += "<option value='" + index + "' >"+value+"</option>";
-        })
-        $('#wards').html('').append(html)
+            html += "<option value='" + value.title + "' >" + value.title + "</option>";
+        });
+        $('#wards').html('').append(html);
+
+        // let html1 = "<option>Địa chỉ đại lý</option>"
+        //   let element2 = '#detail_address'
+        //   $.each(b, function(index,value){
+        //       html1 += "<option value='" + value.address_show + "' >" + value.address_show + "</option>";
+        //   })
+        //   $('#detail_address').html('').append(html1);
+
     });
 });
+$('#wards').change(function(event){
+    provinc = $('#city').val();
+    province = $('#wards').val();
+    $.post('/cities/getShops', {
+        "_token": $('meta[name="csrf-token"]').attr('content'),
+        "proviceId": province,
+        "city":provinc,
+    }).done(function (data) {
+        let html1 = "<option value='' selected disabled>Địa chỉ cửa hàng</option>"
+        let element2 = '#detail_address'
+        $.each(data, function(index,value){
+            html1 += "<option value='" + value.address_show + "' >" + value.address_show + "</option>";
+        })
+        $('#detail_address').html('').append(html1);
+    });
+})
 // Sidebar and Header
 require('jquery-slimscroll');
 require('./vendor/waves');

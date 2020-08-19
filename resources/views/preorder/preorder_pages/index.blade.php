@@ -6,7 +6,7 @@
 
     </div>
     <h2 class="text-center text-primary text-uppercase my-4">Danh Sách đặt trước</h2>
-    <div class="container my-4 ">
+    <div class="container-fluid my-4 ">
         <div class="col-md-12">
             <div class="row">
                 @foreach($products as $key=>$product)
@@ -16,7 +16,10 @@
                 <div class="@if($product->count() >= 2) col-md-6 mx-auto @else col-md-7 mx-auto @endif" >
                     <div class="row">
                         <div class="col-md-6 p-0">
-                            <img src="{{asset('storage/'.$product->Image->first()->Images)}}" width="100%" alt="">
+                            <a href="{{asset('storage/'.$product->Image->first()->Images)}}" data-lightbox="{{$product->Product_Name}}">
+
+                                <img src="{{asset('storage/'.$product->Image->first()->Images)}}" width="100%" alt="">
+                            </a>
                         </div>
                         <div class="col-md-6 d-flex flex-column">
                             <div>
@@ -25,10 +28,11 @@
                                 <h4 class="text-danger"> <span class="text-dark">Giá dự kiến </span> {{number_format($product->Price)}}  <sup>đ</sup></h4>
                                 <h4 class="text-danger"> <span class="text-dark">Tiền cọc </span> {{number_format($product->Deposit)}}  <sup>đ</sup></h4>
                                 @if($product->Reduced_Price != 0)
-                                    <h3 class="text-danger font-weight-bold">{{number_format($product->Reduced_Price)}} <sup>đ</sup> </h3>
+                                    <h4 class="text-danger font-weight-bold">Giá giảm: {{number_format($product->Reduced_Price)}} <sup>đ</sup> </h4>
                                 @endif
+                                <p class="text-primary h4 text-uppercase"><span class="fa fa-spinner spin h2 font-weight-bold"></span> Còn <b class="text-danger h1 font-weight-bold">{{$product->Quantity}}</b> sản phẩm</p>
                                 @if(!empty($product->Gift))
-                                    <div class="row">
+                                    <div class="af-row">
                                         <p class=" float-left badge badge-warning p-2  rounded text-white" >Quà tặng</p>
                                         <hr class="border border-warning" style="width: 75%">
                                     </div>
@@ -41,22 +45,22 @@
                                         </ul>
                                     </ul>
                                 @endif
+                                <br>
                             </div>
-                            <div class="d-flex flex-column justify-content-end h-100" >
+                            <div class="d-flex flex-column justify-content-center h-100" >
                                 @if($product->status == 0)
-                                    <i style="font-size:12px" class="text-danger">* Còn {{$product->Quantity}} sản phẩm</i>
                                     <br />
-                                    <a href="{{route('preorder_order',$product->Product_Code)}}" class="btn btn-warning w-100 text-uppercase text-white mb-3">Đặt ngay</a>
                                     <button id="myBtn" class="btn btn-primary w-100 text-uppercase mb-3">Hướng dẫn đặt hàng</button>
+                                    <a href="{{route('preorder_order',$product->Product_Code)}}" class="btn btn-warning w-100 text-uppercase text-white mb-3">Đặt cọc</a>
                                 @else
                                     <i style="font-size:12px" class="text-danger">* Còn {{$product->Quantity}} sản phẩm</i>
                                     <i style="font-size:12px" class="text-danger">*Đơn hàng đặt trước đã đủ số lượng hẹn quý khách vào lần sau, Cảm ơn quý khách đã quan tâm đến sản phẩm!</i>
                                     <br/>
-                                    <button disabled class="bg-secondary btn btn-disabled w-100 text-uppercase text-white mb-3">Đặt ngay</button>
                                     <button id="myBtn" class="btn btn-primary w-100 text-uppercase mb-3">Hướng dẫn đặt hàng</button>
+                                    <button disabled class="bg-secondary btn btn-disabled w-100 text-uppercase text-white mb-3">Đặt cọc</button>
                                 @endif
                                 
-                                <a href="tel:0934003403" style="background-color:#1B1D4D" class="btn w-100 text-uppercase text-white mb-3">Hotline</a>
+                                <a href="tel:0934003403" style="background-color:#1B1D4D" class="btn w-100 text-uppercase text-white mb-3">Gọi ngay: 0934 003 403</a>
                             </div>
                         </div>
                     </div>
@@ -166,22 +170,17 @@
                             <div class="px-3 text-center">
                                 <h5 class="text-uppercase">{{$product->Product_Name}}</h5>
                                 @if($product->Reduced_Price == 0)
-
                                     <h3 class="text-danger font-weight-bold">{{number_format($product->Price)}} <sup>đ</sup> </h3>
-
                                 @else
-
-                                    <s class="text-secondary" >{{number_format($product->Price)}}  </s><sup>đ</sup>
-                                    <p>Giảm sốc <span class="text-danger font-weight-bold">{{number_format($product->Price - $product->Reduced_Price)}}<sup>đ</sup> </span> chỉ còn</p>
-                                    <h3 class="text-danger font-weight-bold">{{number_format($product->Reduced_Price)}} <sup>đ</sup> </h3>
+                                    <span class="text-uppercase">Giá dự kiến:</span> {{number_format($product->Price)}}<sup>đ</sup>
+                                    <h3 class="text-danger font-weight-bold"> <span class="text-uppercase text-dark h5">Tiền cọc:</span>{{number_format($product->Deposit)}} <sup>đ</sup> </h3>
                                     @if(!empty($product->Gift))
 
                                     <div class="af-row">
                                         <p class=" float-left badge badge-warning p-2  rounded text-white" >Quà tặng</p>
                                         <hr class="border border-warning" style="width: 85%">
                                     </div>
-                                    <ul class="m-0">
-
+                                    <ul class="m-0 text-left">
 
                                         <li>Chọn quà</li>
                                         <ul class="fa-ul m-1">

@@ -1,6 +1,8 @@
 @import "app/variables";
-@import 'theme/css/icons/material-design-iconic-font/css/materialdesignicons.min.css';
 @import 'theme/css/icons/font-awesome/css/fontawesome-all.min.css';
+@import 'theme/css/icons/material-design-iconic-font/css/materialdesignicons.min.css';
+@import 'theme/css/icons/material-design-iconic-font/css/material-design-iconic-font.min.css';
+
 @import "~owl.carousel/dist/assets/owl.carousel.min.css";
 //@import "~owl.carousel/dist/assets/owl.theme.default.min.css";
 @import 'theme/css/spinners.css';
@@ -185,4 +187,54 @@ html {
 .af-row{
     display: flex;
     flex-wrap: wrap;
+}
+.modal-guide {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-guide-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.modal-guide-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-guide-close:hover,
+.modal-guide-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@-moz-keyframes spin {
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    to {transform:rotate(360deg);}
+}
+
+.spin {
+    animation: spin 2000ms linear infinite;
 }
