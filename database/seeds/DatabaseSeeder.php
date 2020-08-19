@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
             ]
         ]);
 
-        DB::table('order_pages')->insert([
+        DB::table('preorder_pages')->insert([
             [
                 'id'=>1,
                 'name_page'=>'Pre-Order'

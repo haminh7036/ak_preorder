@@ -13,7 +13,7 @@ class CreatePreOrderProduct extends Migration
      */
     public function up()
     {
-        Schema::create('preorder_page', function (Blueprint $table) {
+        Schema::create('preorder_pages', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('name_page');
@@ -34,7 +34,7 @@ class CreatePreOrderProduct extends Migration
             $table->Text("Gift")->nullable();
             $table->boolean("status");
             $table->integer('preorder_page_id')->unsigned();
-            $table->foreign('preorder_page_id')->references('id')->on('preorder_page');
+            $table->foreign('preorder_page_id')->references('id')->on('preorder_pages');
         });
     }
 
