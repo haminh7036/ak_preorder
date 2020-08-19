@@ -1,0 +1,122 @@
+.footer {
+    background-color: #f3f3f3;
+
+    .footer--seperate {
+        border: 1px solid rgba($color: $dark, $alpha: 0.2);
+    }
+
+    &__to-top {
+        text-align: center;
+        padding: 6px 0;
+        background-color: #eeeeee;
+        cursor: pointer;
+    }
+
+    .container {
+        .footer__container__detail {
+            .footer__container__item {
+                .title {
+                    font-size: 17px;
+                }
+
+                .list-detail {
+                    list-style-type: none;
+                    padding-left: 0;
+
+                    li {
+                        padding: 5px 0;
+
+                        a{
+                            color:black;
+                        }
+                        a:hover{
+                            color: #eb8314;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer__container__method {
+            .footer__container__item {
+                .footer__container__contact {
+                    input {
+                        width: 238px;
+                        padding: 2px 8px;
+                    }
+
+                    .button {
+                        background: #d57b2d;
+                        border: 0;
+                        color: white;
+                        padding: 4px 10px;
+                    }
+                }
+
+                .footer__container__social {
+                    padding-left: 0;
+                    list-style-type: none;
+                    display: flex;
+
+                    li {
+                        padding: 0 4px;
+                        a {
+                            width: 30px;
+                            height: 30px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: white;
+
+                            &#fb {
+                                background-color: #3b5998;
+                            }
+                            &#yt {
+                                background-color: #dd2627;
+                            }
+                            &#ins {
+                                background-color: #dd4b38;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer__container__author {
+            .authorization {
+                a {
+                    display: block;
+                    img {
+                        width: 70%;
+                        height: 100px;
+                        object-fit: contain;
+                    }
+
+                    &.trade-logo {
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+
+            .description {
+
+            }
+
+            .casio-author {
+                img {
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .footer__container__copyright {
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
