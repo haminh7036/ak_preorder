@@ -105,7 +105,7 @@ $('input[name="Payment"]').change(function(event){
 })
 $('#city').change(function (event) {
     provinc = $('#city').val();
-    $.post('/cities/getProvince', {
+    $.post('/page/cities/getProvince', {
         "_token": $('meta[name="csrf-token"]').attr('content'),
         "proviceId": provinc
     }).done(function (data) {
@@ -128,7 +128,7 @@ $('#city').change(function (event) {
 $('#wards').change(function(event){
     provinc = $('#city').val();
     province = $('#wards').val();
-    $.post('/cities/getShops', {
+    $.post('/page/cities/getShops', {
         "_token": $('meta[name="csrf-token"]').attr('content'),
         "proviceId": province,
         "city":provinc,
