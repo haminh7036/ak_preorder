@@ -158,7 +158,7 @@
                                     @else
                                         <i style="font-size:12px" class="text-danger">*Đơn hàng đặt trước đã đủ số lượng hẹn quý khách vào lần sau, Cảm ơn quý khách đã quan tâm đến sản phẩm!</i>
                                         <br/>
-                                        <button id="store_order" disabled class="bg-secondary btn btn-disabled w-25 text-uppercase text-white my-3">HOÀN TẤT</button>
+                                        <button id="store_order_disabled" disabled class="bg-secondary btn btn-disabled w-25 text-uppercase text-white my-3">HOÀN TẤT</button>
                                     @endif
                                 </td>
                             </tr>
