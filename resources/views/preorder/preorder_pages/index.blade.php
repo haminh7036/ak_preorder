@@ -49,6 +49,7 @@
                                     <a href="{{route('preorder_order',$product->Product_Code)}}" class="btn btn-warning w-100 text-uppercase text-white mb-3">Đặt ngay</a>
                                     <button id="myBtn" class="btn btn-primary w-100 text-uppercase mb-3">Hướng dẫn đặt hàng</button>
                                 @else
+                                    <i style="font-size:12px" class="text-danger">* Còn {{$product->Quantity}} sản phẩm</i>
                                     <i style="font-size:12px" class="text-danger">*Đơn hàng đặt trước đã đủ số lượng hẹn quý khách vào lần sau, Cảm ơn quý khách đã quan tâm đến sản phẩm!</i>
                                     <br/>
                                     <button disabled class="bg-secondary btn btn-disabled w-100 text-uppercase text-white mb-3">Đặt ngay</button>
