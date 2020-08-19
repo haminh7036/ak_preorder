@@ -3,7 +3,7 @@
 
     <div id="order" class="my-4">
         <h1 class="text-center text-uppercase">
-            Đặt trước <br> {{$product->Product_Name}}
+            {{$product->Product_Name}}
         </h1>
 
         <div class="container-fluid">
@@ -78,6 +78,12 @@
                                 <td width="25%" class="text-right h4 font-weight-normal ">Tiền cọc</td>
                                 <td class="pl-3">
                                     <span class="text-danger h4 font-weight-normal">{{number_format($product->Deposit)}}<sup>đ</sup></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="25%" ></td>
+                                <td class="pl-3">
+                                    <p class="text-primary h4 text-uppercase"><span class="fa fa-spinner spin h2 font-weight-bold"></span> Còn <b class="text-danger h1 font-weight-bold">{{$product->Quantity}}</b> sản phẩm</p>
                                 </td>
                             </tr>
                             <tr>

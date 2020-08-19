@@ -48,7 +48,7 @@
                                 <br>
                             </div>
                             <div class="d-flex flex-column justify-content-center h-100" >
-                                @if($product->status == 0)
+                                @if($product->status == 0 && $product->Quantity > 0)
                                     <br />
                                     <button id="myBtn" class="btn btn-primary w-100 text-uppercase mb-3">Hướng dẫn đặt hàng</button>
                                     <a href="{{route('preorder_order',$product->Product_Code)}}" class="btn btn-warning w-100 text-uppercase text-white mb-3">Đặt cọc</a>
@@ -194,7 +194,7 @@
                                 @endif
                                 <p class="text-center">Còn {{$product->Quantity}} sản phẩm</p>
 
-                                @if($product->status == 0)
+                                @if($product->status == 0  && $product->Quantity > 0) 
                                     <a href="{{route('preorder_order',$product->Product_Code)}}" class="btn btn-warning w-100 text-uppercase text-white mb-3">Đặt ngay</a>
                                 @else
                                     <i style="font-size:12px" class="text-danger">*Đơn hàng đặt trước đã đủ số lượng hẹn quý khách vào lần sau, Cảm ơn quý khách đã quan tâm đến sản phẩm!</i>

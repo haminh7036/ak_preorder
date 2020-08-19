@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/g-shock-dream-challenge', 'LandingPageController@landing_page_1');
 Route::get('/thong-tin-su-kien-g-shock-dream-challenge', 'LandingPageController@landing_page_2');
 Route::get('/baby-ba-130', 'LandingPageController@landing_page_3');
+Route::post('/search','LandingPageController@search')->name('search-clone');
 Route::group(['namespace'=>'PreOrder'], function (){
     Route::get('/preorder','PreOrderMainController@index');
     Route::get('/preorder/{slug}','PreOrderMainController@order')->name('preorder_order');

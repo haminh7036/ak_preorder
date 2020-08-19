@@ -47,9 +47,11 @@ class PreorderOrderController extends Controller
     public function destroy($id)
     {
         $order = PreorderOrder::findOrFail($id);
-
-        $order->delete();
-
+        if($order->delete()){
+            $order->Product->update([
+                'Quantity' => $order->Product['Quantity'] + 1,
+            ]);
+        }
         Session::flash('flash_message', 'Xóa thành công');
 
         return redirect(route('order.index'));

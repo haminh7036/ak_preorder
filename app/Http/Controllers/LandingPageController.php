@@ -187,5 +187,7 @@ class LandingPageController extends Controller
         Session::flash('flash_message', __('validation.flash_messages.slide-image.created'));
         return redirect('/landing-page-1');
     }
-
+    public function search(Request $request){
+        return redirect('https://casio.anhkhue.com/index.php?language=vi&nv=shops&op=search_result&keyword='.$request['search_value']);
+    }
 }

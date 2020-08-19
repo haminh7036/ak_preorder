@@ -56,13 +56,13 @@
             </div>
         </div>
 
-        <form action="#" class="navbar-casio__center__search" method="POST">
+        <form action="{{route('search-clone')}}" class="navbar-casio__center__search" method="POST">
         @csrf
 
         <!-- Please pass the data at both selec / option and the code below  -->
-            <select name="cata" id="cata">
-                <option value="Value">Value</option>
-            </select>
+                <!-- <select name="cata" id="cata">
+                    <option value="Value">Value</option>
+                </select> -->
 
             <!-- Data synchronization for 2 components (Above, Below) -->
 
@@ -71,21 +71,10 @@
                         class="fa fa-chevron-up"></i></button>
                 <ul class="navbar-casio__center__list">
                     <li class="navbar-casio__center__option">Tất cả danh mục</li>
-
-                    <li class="navbar-casio__center__option"><a href="#">G-Shock</a></li>
-                    <li class="navbar-casio__center__option"><a href="#">G-QUARD</a></li>
-                    <li class="navbar-casio__center__option"><a href="#">G-KEI</a></li>
-                    <li class="navbar-casio__center__option"><a href="#">G-KEI</a></li>
-                    <li class="navbar-casio__center__option"><a href="#">G-KEI</a></li>
-                    <li class="navbar-casio__center__option"><a href="#">G-KEI</a></li>
-                    <li class="navbar-casio__center__option"><a href="#">G-KEI</a></li>
-                    <li class="navbar-casio__center__option"><a href="#">G-KEI</a></li>
-                    <li class="navbar-casio__center__option"><a href="#">G-KEI</a></li>
-                    <li class="navbar-casio__center__option"><a href="#">G-KEI</a></li>
                 </ul>
 
                 <div class="navbar-casio__center__box-search">
-                    <input type="text" class="navbar-casio__center__search-entry" placeholder="Tên sản phẩm...">
+                    <input  type="text" name='search_value' class="navbar-casio__center__search-entry" placeholder="Tên sản phẩm..." required>
                     <button type="submit" class="navbar-casio__center__btn-search"><i class="fa fa-search"></i></button>
                 </div>
                 <!-- this script to open catalog -->
