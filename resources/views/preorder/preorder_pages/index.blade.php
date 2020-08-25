@@ -79,15 +79,15 @@
         <div class="modal-guide-content">
             <span class="modal-guide-close">&times;</span>
             <p style="text-align:center">PRE ODER &ndash; ĐẶT H&Agrave;NG TRƯỚC</p>
-            <p style="text-align:center">HƯỚNG DẪN ĐẶT H&Agrave;NG TRƯỚC &amp; THANH TO&Aacute;N SẢN PHẨM: G-SHOCK GA-110JOP</p>
+            <p style="text-align:center">HƯỚNG DẪN ĐẶT H&Agrave;NG TRƯỚC &amp; THANH TO&Aacute;N SẢN PHẨM: GA-110JDB-1A4</p>
             <p><strong>1. THỜI GIAN:</strong></p>
-            <p style="margin-left:40px">Thời gian đặt h&agrave;ng trước: từ ng&agrave;y 12 đến 17/08/2020</p>
-            <p style="margin-left:40px">Thời gian giao h&agrave;ng dự kiến: từ ng&agrave;y 18 đến 22/08/2020</p>
+            <p style="margin-left:40px">Thời gian đặt h&agrave;ng trước: từ ng&agrave;y  7/9 đến ngày 12/9/2020</p>
+            <p style="margin-left:40px">Thời gian giao h&agrave;ng dự kiến: từ ng&agrave;y 13/09 đến ngày 17/09/2020</p>
             <p><strong>2. HƯỚNG DẪN ĐẶT H&Agrave;NG TRƯỚC:</strong></p>
             <p style="margin-left:40px">- Bước 1: Qu&yacute; kh&aacute;ch c&oacute; thể đặt h&agrave;ng sản phẩm tại: Website: https://casio.anhkhue.com/</p>
             <p style="margin-left:40px">Fanpage:</p>
-            <p style="margin-left:40px">+ FB/Casio.AnhKhueSaiGon/</p>
-            <p style="margin-left:40px">+ FB/GShockBabyGinVietnam/</p>
+            <p style="margin-left:40px">+ FB.com/Casio.AnhKhueSaiGon/</p>
+            <p style="margin-left:40px">+ FB.com/GShockBabyGinVietnam/</p>
             <p style="margin-left:40px">Hoặc li&ecirc;n hệ hotline: 0934 003 403 để được hỗ trợ đặt h&agrave;ng.</p>
             <p style="margin-left:40px">- Bước 2: H&igrave;nh thức nhận h&agrave;ng</p>
             <p style="margin-left:40px">+ Giao h&agrave;ng tận nơi.</p>
