@@ -5,7 +5,7 @@
         <img src="{{asset('images/banner-dragonball.jpg')}}" alt="" class="w-100 h-100">
 
     </div>
-    <h2 class="text-center text-primary text-uppercase my-4">Danh Sách đặt trước</h2>
+    <h2 class="text-center text-primary text-uppercase my-4">ĐẶT TRƯỚC SIÊU PHẨM – DRAGON BALL Z</h2>
     <div class="container-fluid my-4 ">
         <div class="col-md-12">
             <div class="row">
@@ -86,8 +86,8 @@
             <p><strong>2. HƯỚNG DẪN ĐẶT H&Agrave;NG TRƯỚC:</strong></p>
             <p style="margin-left:40px">- Bước 1: Qu&yacute; kh&aacute;ch c&oacute; thể đặt h&agrave;ng sản phẩm tại: Website: https://casio.anhkhue.com/</p>
             <p style="margin-left:40px">Fanpage:</p>
-            <p style="margin-left:40px">+ FB.com/Casio.AnhKhueSaiGon/</p>
-            <p style="margin-left:40px">+ FB.com/GShockBabyGinVietnam/</p>
+            <p style="margin-left:40px">+ <a href="FB.com/Casio.AnhKhueSaiGon/">FB.com/Casio.AnhKhueSaiGon/</a></p>
+            <p style="margin-left:40px">+ <a href="FB.com/GShockBabyGinVietnam/">FB.com/GShockBabyGinVietnam/</a> </p>
             <p style="margin-left:40px">Hoặc li&ecirc;n hệ hotline: 0934 003 403 để được hỗ trợ đặt h&agrave;ng.</p>
             <p style="margin-left:40px">- Bước 2: H&igrave;nh thức nhận h&agrave;ng</p>
             <p style="margin-left:40px">+ Giao h&agrave;ng tận nơi.</p>
@@ -115,7 +115,7 @@
                         height: 600px;
                     }
                 </style>
-                <h2 class="text-uppercase text-center text-primary my-3">video giới thiệu sản phẩm</h2>
+                <h2 class="text-uppercase text-center text-primary my-3">GA-110JDB-1A4 – TRONG NGÔI ĐỀN HUYỀN THOẠI DRAGON BALL Z</h2>
                 <div class="text-center" id="iframe-present">
                     {!! $Page->iframe !!}
                 </div>
@@ -127,7 +127,7 @@
 
     @if(!empty($Page->bodyhtml))
         <article id="content" class="my-4">
-            <h2 class="text-uppercase text-primary text-center">Bộ hình & thông số</h2>
+            <h2 class="text-uppercase text-primary text-center">SON GOKU TRỞ LẠI VỚI THIẾT KẾ GA-110JDB</h2>
             
             <div class="container">
 
@@ -140,7 +140,7 @@
 
     @endif
     <div id="specification">
-        <h2 class="text-uppercase text-center text-primary my-3">hình ảnh và thông số kỹ thuật</h2>
+        <h2 class="text-uppercase text-center text-primary my-3">THÔNG SỐ KỸ THUẬT</h2>
         <div class="container">
             <ul class="nav nav-pills m-t-30 justify-content-center m-b-30 my-4">
                 @foreach($products as $product)
@@ -192,10 +192,11 @@
                                     @endif
 
                                 @endif
-                                <p class="text-center">Còn {{$product->Quantity}} sản phẩm</p>
+                                <p class="text-primary h4 text-uppercase"><span class="fa fa-spinner spin h2 font-weight-bold"></span> Còn <b class="text-danger h1 font-weight-bold">{{$product->Quantity}}</b> sản phẩm</p>
+
 
                                 @if($product->status == 0  && $product->Quantity > 0) 
-                                    <a href="{{route('preorder_order',$product->Product_Code)}}" class="btn btn-warning w-100 text-uppercase text-white mb-3">Đặt ngay</a>
+                                    <a href="{{route('preorder_order',$product->Product_Code)}}" class="btn btn-warning w-100 text-uppercase text-white mb-3">Đặt Cọc</a>
                                 @else
                                     <i style="font-size:12px" class="text-danger">*Đơn hàng đặt trước đã đủ số lượng hẹn quý khách vào lần sau, Cảm ơn quý khách đã quan tâm đến sản phẩm!</i>
                                     <br/>
