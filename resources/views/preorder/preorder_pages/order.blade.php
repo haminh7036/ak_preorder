@@ -148,10 +148,10 @@
                                         <input type="radio" id="transfer" name="Payment" value="Chuyển khoản ngân hàng">
                                         <label class="h5 font-weight-normal" for="transfer">Chuyển khoản ngân hàng</label>
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <input type="radio" id="alepay" name="Payment" value="Thanh toán AlePay">
                                         <label class="h5 font-weight-normal" for="alepay">Thanh toán AlePay</label>
-                                    </div>
+                                    </div> -->
                                     {!! $errors->first('Payment', '<p class="text-danger">Vui lòng chọn đúng phương thức thanh toán</p>')!!}
 
                                 </td>
