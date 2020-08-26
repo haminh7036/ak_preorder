@@ -2,7 +2,7 @@
 @section('content')
     <div id="banner">
 
-        <img src="{{asset('images/dragonball-1360.jpg')}}" alt="" class="w-100 h-100">
+        <img src="{{asset('images/banner-dragonball.jpg')}}" alt="" class="w-100 h-100">
 
     </div>
     <h2 class="text-center text-primary text-uppercase my-4">ĐẶT TRƯỚC SIÊU PHẨM – DRAGON BALL Z</h2>
@@ -16,10 +16,17 @@
                 <div class="@if($product->count() >= 2) col-md-6 mx-auto @else col-md-7 mx-auto @endif" >
                     <div class="row">
                         <div class="col-md-6 p-0">
+                            @if(!empty($product->Image->first()->Images))
                             <a href="{{asset('storage/'.$product->Image->first()->Images)}}" data-lightbox="{{$product->Product_Name}}">
 
                                 <img src="{{asset('storage/'.$product->Image->first()->Images)}}" width="100%" alt="">
                             </a>
+                            @else
+                            <a href="" data-lightbox="{{$product->Product_Name}}">
+
+                                <img src="" width="100%" alt="">
+                            </a>
+                            @endif
                         </div>
                         <div class="col-md-6 d-flex flex-column">
                             <div>
