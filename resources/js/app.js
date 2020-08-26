@@ -186,15 +186,13 @@ require('jquery-slimscroll');
 require('./vendor/waves');
 require('sticky-kit/dist/sticky-kit');
 require('./vendor/jquery.sparkline.min');
-
 // JSZip
-// window.JSZip = require('jszip');
+window.JSZip = require('jszip');
 
 // pdfMake
 // window.pdfMake = require('pdfmake/build/pdfmake');
 // window.pdfFonts = require('pdfmake/build/vfs_fonts');
 // pdfMake.vfs = pdfFonts.pdfMake.vfs;
-
 // Datatables
 require('datatables.net-bs4');
 require('datatables.net-buttons-bs4');

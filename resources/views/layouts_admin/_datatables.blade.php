@@ -30,6 +30,8 @@
                     filename: filename,
                     sheetName: title,
                     title: title,
+                    charset: 'UTF-8',
+                    bom: true,
                 },
                 {
                     extend: 'pdfHtml5',

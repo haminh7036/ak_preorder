@@ -52,8 +52,6 @@
                 scrollCollapse: true,
                 paging:false,
                 searching:true,
-
-
             };
             let buttonOptions = {
                 dom: 'Bfrtip',
