@@ -12,7 +12,7 @@
                     <div class="owl-carousel news owl-theme px-3 py-3 owl-products-images">
                         @foreach($product->Image as $image)
                             <div class="item">
-                                <img height="500px" src="{{asset('storage/'.$image->Images)}}" />
+                                <img height="100%" src="{{asset('storage/'.$image->Images)}}" />
                             </div>
                         @endforeach
                     </div>
