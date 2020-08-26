@@ -2,7 +2,7 @@
 @section('content')
     <div id="banner">
 
-        <img src="{{asset('images/banner-dragonball.jpg')}}" alt="" class="w-100 h-100">
+        <img src="{{asset('images/dragonball-1360.jpg')}}" alt="" class="w-100 h-100">
 
     </div>
     <h2 class="text-center text-primary text-uppercase my-4">ĐẶT TRƯỚC SIÊU PHẨM – DRAGON BALL Z</h2>
