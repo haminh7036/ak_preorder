@@ -129,7 +129,7 @@
 
     @if(!empty($Page->bodyhtml))
         <article id="content" class="my-4">
-            <h2 class="text-uppercase text-primary text-center">SON GOKU TRỞ LẠI VỚI THIẾT KẾ GA-110JDB</h2>
+            <h2 class="text-uppercase text-primary text-center">SON GOKU TRỞ LẠI VỚI THIẾT KẾ GA-110JDB-1A4</h2>
             
             <div class="container">
 
