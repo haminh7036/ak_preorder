@@ -120,7 +120,7 @@
                             </tr>
                             <tr id="block_test" style="display: none">
                                 <td width="25%" class="text-right h4 font-weight-normal">Địa chỉ giao hàng</td>
-                                <td class="pl-3">
+                                <!-- <td class="pl-3">
                                     <div class="form-group">
                                         <select style="width:180px" class="form-control d-inline" id="city" name="city">
                                             <option value="" selected disabled>Tỉnh/Thành phố</option>
@@ -142,15 +142,15 @@
                                     {!! $errors->first('wards', '<p class="text-danger">Vui lòng chọn quận huyện </p>')!!}
                                     {!! $errors->first('detail_address', '<p class="text-danger">Vui lòng nhập rõ địa chỉ</p>')!!}
 
-                                </td>
+                                </td> -->
                             </tr>
                             <tr>
                                 <td width="25%" class="text-right h4 font-weight-normal">Phương thức thanh toán </td>
                                 <td class="pl-3">
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <input type="radio" id="payinstore" name="Payment" value="Đặt cọc tại cửa hàng">
                                         <label class="h5 font-weight-normal" for="payinstore">Đặt cọc tại cửa hàng</label>
-                                    </div>
+                                    </div> -->
                                     <div class="form-group">
                                         <input type="radio" id="transfer" name="Payment" value="Chuyển khoản ngân hàng">
                                         <label class="h5 font-weight-normal" for="transfer">Chuyển khoản ngân hàng</label>
