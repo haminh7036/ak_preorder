@@ -15,6 +15,41 @@
                 </div>
             <div class="form-group">
 
+                <label>Title 2:</label>
+                <input class='form-group' type="file" name="big_banner">
+
+
+            </div>
+            <div class="form-group">
+
+                <label>Title 1:</label>
+                <input class="form-control" type="text" value="{{$page->title1}}" name="title1">
+
+            </div>
+            
+            <div class="form-group">
+
+                <label>Title 2:</label>
+                <input class="form-control" type="text" value="{{$page->title2}}" name="title2">
+
+            </div>
+            
+            <div class="form-group">
+
+                <label>Title 3:</label>
+                <input class="form-control" type="text" value="{{$page->title3}}" name="title3">
+
+            </div>
+            
+            <div class="form-group">
+
+                <label>Title 4:</label>
+                <input class="form-control" type="text" value="{{$page->title4}}" name="title4">
+
+            </div>
+                
+            <div class="form-group">
+
                 <label>Tên trang:</label>
 
                 <textarea name=bodyhtml id="text" cols="30" rows="10">{{$page->bodyhtml}}</textarea>

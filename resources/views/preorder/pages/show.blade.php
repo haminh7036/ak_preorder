@@ -10,13 +10,55 @@
             <h2 class="card-title">{{$page->name_page}}</h2>
             <hr>
             <h2 class="card-title">
+                Big Banner
+            </h2>
+            <img src="{{asset('storage/'.$page->big_banner)}}" alt="dumbass">
+            <hr>
+            <h2 class="card-title">
                 Iframe
             </h2>
+
             <hr>
             @if(!empty($page->iframe))
                 {!! $page->iframe !!}
             @else
                 <b class="text-purple" >Iframe hiện tại đang trống</b>
+            @endif
+            <hr>
+            <h2>
+                Title 1:
+            </h2>
+            @if(!empty($page->title1))
+                {{$page->title1}}
+            @else
+                <b class="text-purple" >Title hiện tại đang trống</b>
+            @endif
+            <hr>
+            <h2>
+                Title 2:
+            </h2>
+            @if(!empty($page->title2))
+                {{$page->title2}}
+            @else
+                <b class="text-purple" >Title hiện tại đang trống</b>
+            @endif
+            <hr>
+            <h2>
+                Title 3:
+            </h2>
+            @if(!empty($page->title3))
+                {{$page->title3}}
+            @else
+                <b class="text-purple" >Title hiện tại đang trống</b>
+            @endif
+            <hr>
+            <h2>
+                Title 4:
+            </h2>
+            @if(!empty($page->title4))
+                {{$page->title4}}
+            @else
+                <b class="text-purple" >Title hiện tại đang trống</b>
             @endif
             <h2 class="mt-3 card-title">
                 Nội dung

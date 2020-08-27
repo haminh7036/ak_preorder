@@ -96,9 +96,13 @@ class PreorderPageController extends Controller
     public function update(Request $request, $id)
     {
         $page = PreorderPage::findorFail($id);
-        $request = $request->all();
-        $page->update($request);
-
+        $data = $request->all();
+        if($request->hasFile('big_banner')){
+            $file = $request->big_banner;
+            $filename = $file->store('photos/big_banner','public');
+            $data['big_banner'] = $filename;
+        }
+        $page->update($data);
         return redirect(route('pre-order-page.show',$id));
     }
 

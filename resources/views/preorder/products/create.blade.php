@@ -221,6 +221,14 @@
                 </div>
             </div>
 
+            <div class="form-group">
+
+                <label>Phương thức đặt hàng:</label>
+
+                <textarea name='order_guide' id="text" cols="30" rows="10"></textarea>
+            </div>
+
+
             <h2 class="card-title text-blue">Hình ảnh</h2>
             <hr>
             <div class="form-group">
@@ -247,6 +255,14 @@
     </div>
 @endsection
 @section('extra_scripts')
+    <script src={{ url('ckeditor/ckeditor.js') }}></script>
+    <script>
+        CKEDITOR.replace( 'text', {
+            filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
+
+        } );
+    </script>
+    @include('ckfinder::setup')
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
 

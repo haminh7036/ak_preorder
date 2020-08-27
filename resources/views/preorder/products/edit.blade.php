@@ -379,6 +379,13 @@
 
                         </div>
 
+                        <div class="form-group">
+
+                            <label>Phương thức đặt hàng:</label>
+
+                            <textarea name='order_guide' id="text" cols="30" rows="10">{{$product->order_guide}}</textarea>
+                        </div>
+
                         <h3 class="box-title">Hình ảnh</h3>
 
                         <hr class="m-t-0 m-b-40">
@@ -440,6 +447,14 @@
     </div>
 @endsection
 @section('extra_scripts')
+    <script src={{ url('ckeditor/ckeditor.js') }}></script>
+    <script>
+        CKEDITOR.replace( 'text', {
+            filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
+
+        } );
+    </script>
+    @include('ckfinder::setup')
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
 

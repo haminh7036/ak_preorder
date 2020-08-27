@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PreorderProduct extends Model
 {
-    protected $fillable =[ 'Product_Name' , 'Product_Code' , 'Price' , 'Reduced_Price', 'Deposit' ,'Quantity', 'Gift', 'status','preorder_page_id'];
+    protected $fillable =[ 'Product_Name' , 'Product_Code','order_guide' , 'Price' , 'Reduced_Price', 'Deposit' ,'Quantity', 'Gift', 'status','preorder_page_id'];
 
     public function Image()
     {

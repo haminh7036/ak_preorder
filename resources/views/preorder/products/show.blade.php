@@ -40,7 +40,6 @@
                                     </div>
 
                                 </div>
-
                                 <!--/span-->
 
                                 <div class="col-md-6">
@@ -396,6 +395,18 @@
                             </div>
 
 
+                        </div>
+                        <h3 class="box-title">Phương Thức Đặt Hàng</h3>
+                        
+                        <hr class="m-t-0 m-b-40">
+
+                        <div class="card">
+                            <div class="card-body">
+                            
+                                {!! $product->order_guide !!}
+
+                            
+                            </div>
                         </div>
 
                         <h3 class="box-title">Hình ảnh</h3>

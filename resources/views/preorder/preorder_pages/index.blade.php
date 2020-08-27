@@ -2,10 +2,10 @@
 @section('content')
 <div id="banner">
 
-    <img src="{{asset('images/DRAGON_BALL_Z_1350x520.jpg')}}" alt="" class="w-100 h-100">
+    <img src="{{asset('storage/'.$Page->big_banner)}}" alt="" class="w-100 h-100">
 
 </div>
-<h2 class="text-center text-primary text-uppercase my-4">ĐẶT TRƯỚC SIÊU PHẨM – DRAGON BALL Z</h2>
+<h2 class="text-center text-primary text-uppercase my-4">{{$Page->title1}}</h2>
 <div class="container-fluid my-4 ">
     <div class="col-md-12">
         <div class="row">
@@ -60,7 +60,7 @@
                         <div class="d-flex flex-column justify-content-center h-100">
                             @if($product->status == 0 && $product->Quantity > 0)
                             <br />
-                            <button id="myBtn" class="btn btn-primary w-100 text-uppercase mb-3">Hướng dẫn đặt
+                            <button id="{{'myBtn'.$loop->iteration}}" onclick="showButton({{$loop->iteration}})" class="btn btn-primary w-100 text-uppercase mb-3">Hướng dẫn đặt
                                 hàng</button>
                             <a href="{{route('preorder_order',$product->Product_Code)}}"
                                 class="btn btn-warning w-100 text-uppercase text-white mb-3">Đặt cọc</a>
@@ -69,7 +69,7 @@
                             <i style="font-size:12px" class="text-danger">*Đơn hàng đặt trước đã đủ số lượng hẹn quý
                                 khách vào lần sau, Cảm ơn quý khách đã quan tâm đến sản phẩm!</i>
                             <br />
-                            <button id="myBtn" class="btn btn-primary w-100 text-uppercase mb-3">Hướng dẫn đặt
+                            <button id="{{'myBtn'.$loop->iteration}}" onclick="showButton({{$loop->iteration}})" class="btn btn-primary w-100 text-uppercase mb-3">Hướng dẫn đặt
                                 hàng</button>
                             <button disabled
                                 class="bg-secondary btn btn-disabled w-100 text-uppercase text-white mb-3">Đặt
@@ -87,209 +87,18 @@
                     <div class="col-md-6 w-100 rounded" style="background-color: #1B1D4D"></div>
                 </div>
             </div>
+            <div id="{{'myModal'.$loop->iteration}}" class="modal-guide">
+                <div class="modal-guide-content">
+                    <span id="{{'closeModal'.$loop->iteration}}" class="modal-guide-close">&times;</span>
+                    {!! $product->order_guide !!}
+                </div>
+            </div>
             @endforeach
         </div>
 
     </div>
 </div>
-<div id="myModal" class="modal-guide">
-    <div class="modal-guide-content">
-        <span class="modal-guide-close">&times;</span>
-        <p style="text-align:center"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">PRE ODER
-                                &ndash; ĐẶT H&Agrave;NG TRƯỚC</span></span></span></span></span></p>
 
-        <p style="text-align:center"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">HƯỚNG DẪN
-                                ĐẶT H&Agrave;NG TRƯỚC &amp; THANH TO&Aacute;N SẢN PHẨM:
-                                GA-110JDB-1A4</span></span></span></span></span></p>
-
-        <p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span
-                            style="font-size:9.5pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                    style="color:#212529">1. THỜI GIAN:</span></span></span></strong></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">Thời gian
-                                đặt h&agrave;ng trước: từ ng&agrave;y 7/9 đến ng&agrave;y
-                                12/9/2020</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">Thời gian
-                                giao h&agrave;ng dự kiến: từ ng&agrave;y 13/09 đến ng&agrave;y
-                                17/09/2020</span></span></span></span></span></p>
-
-        <p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span
-                            style="font-size:9.5pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                    style="color:#212529">2. HƯỚNG DẪN ĐẶT H&Agrave;NG
-                                    TRƯỚC:</span></span></span></strong></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">- Bước 1:
-                                Qu&yacute; kh&aacute;ch c&oacute; thể đặt h&agrave;ng sản phẩm tại: Website:
-                            </span></span></span><a href="https://casio.anhkhue.com/"
-                        style="color:blue; text-decoration:underline"><span style="font-size:9.5pt"><span
-                                style="font-family:&quot;Segoe UI&quot;,sans-serif">https://casio.anhkhue.com/</span></span></a></span></span>
-        </p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                style="color:#212529">Fanpage:</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                style="color:#212529">+&nbsp;</span></span></span><a
-                        href="https://casio.anhkhue.com/page/preorder/FB.com/Casio.AnhKhueSaiGon/"
-                        style="color:blue; text-decoration:underline"><span style="font-size:9.5pt"><span
-                                style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                    style="color:#007bff">FB.com/Casio.AnhKhueSaiGon/</span></span></span></a></span></span>
-        </p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                style="color:#212529">+&nbsp;</span></span></span><a
-                        href="https://casio.anhkhue.com/page/preorder/FB.com/GShockBabyGinVietnam/"
-                        style="color:blue; text-decoration:underline"><span style="font-size:9.5pt"><span
-                                style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                    style="color:#007bff">FB.com/GShockBabyGinVietnam/</span></span></span></a></span></span>
-        </p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">Hoặc
-                                li&ecirc;n hệ hotline: 0934 003 403 để được hỗ trợ đặt
-                                h&agrave;ng.</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">- Bước 2:
-                                H&igrave;nh thức nhận h&agrave;ng</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">+ Giao
-                                h&agrave;ng tận nơi.</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">- Bước 3:
-                                H&igrave;nh thức thanh to&aacute;n</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">1. Thanh
-                                to&aacute;n trước to&agrave;n bộ gi&aacute; trị sản phẩm
-                            </span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                style="color:#212529">2.</span></span></span> <span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                style="color:#212529">Đ</span></span></span><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">ặt cọc trước
-                                30% gi&aacute; trị sản phẩm (tương ứng 1,974,000đ)</span></span></span></span></span>
-        </p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">Thanh
-                                to&aacute;n 70% gi&aacute; trị c&ograve;n lại khi nhận h&agrave;ng.
-                            </span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">Ưu
-                                ti&ecirc;n cho kh&aacute;ch h&agrave;ng thanh to&aacute;n trước to&aacute;n bộ
-                                gi&aacute; trị sản phẩm.</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">Qu&yacute;
-                                kh&aacute;ch c&oacute; thể </span></span></span><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">thanh
-                                to&aacute;n trực tuyến (sử dụng thẻ t&iacute;n dụng, ATM</span></span></span><span
-                        style="font-size:9.5pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                style="color:#212529">) hoặc chuyển khoản ng&acirc;n
-                                h&agrave;ng.</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">Th&ocirc;ng
-                                tin chuyển khoản:</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">&middot;
-                                T&ecirc;n t&agrave;i khoản: C</span></span></span><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">&ocirc;ng
-                            </span></span></span><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                style="color:#212529">T</span></span></span><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                style="color:#212529">y</span></span></span><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">
-                                C</span></span></span><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">ổ
-                            </span></span></span><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                style="color:#212529">P</span></span></span><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                style="color:#212529">hần</span></span></span><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529"> Anh
-                                Khu&ecirc; S&agrave;i G&ograve;n</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">&middot; Số
-                                t&agrave;i khoản: 0251002726845</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">&middot;
-                                Tại: Ng&acirc;n h&agrave;ng Vietcombank - Chi nh&aacute;nh B&igrave;nh
-                                T&acirc;y</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">&middot; Nội
-                                dung </span></span></span><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">chuyển
-                                khoản</span></span></span><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span
-                                style="color:#212529">:</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">Trường hợp
-                                đặt cọc: </span></span></span>&nbsp;<span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">Đặt cọc 30%
-                                ĐH </span></span></span><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">DRAGON BALL
-                                Z</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">Trường hợp
-                                thanh to&aacute;n hết: Thanh to&aacute;n ĐH DRAGON
-                                BALL</span></span></span></span></span></p>
-
-        <p style="margin-left:40px"><span style="font-size:12pt"><span
-                    style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:9.5pt"><span
-                            style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#212529">Lưu
-                                &yacute;: Mỗi kh&aacute;ch h&agrave;ng chỉ được đặt một c&aacute;i. Nếu kh&aacute;ch
-                                h&agrave;ng thay đổi &yacute; định kh&ocirc;ng nhận h&agrave;ng sau khi đ&atilde; tiến
-                                h&agrave;nh đặt h&agrave;ng, phần đặt cọc n&agrave;y sẽ kh&ocirc;ng được ho&agrave;n
-                                lại.</span></span></span></span></span></p>
-    </div>
-</div>
 
 @if(!empty($Page->iframe))
 
@@ -302,8 +111,7 @@
                 height: 600px;
             }
         </style>
-        <h2 class="text-uppercase text-center text-primary my-3">GA-110JDB-1A4 – TRONG NGÔI ĐỀN HUYỀN THOẠI DRAGON BALL
-            Z</h2>
+        <h2 class="text-uppercase text-center text-primary my-3">{{$Page->title2}}/h2>
         <div class="text-center" id="iframe-present">
             {!! $Page->iframe !!}
         </div>
@@ -315,7 +123,7 @@
 
 @if(!empty($Page->bodyhtml))
 <article id="content" class="my-4">
-    <h2 class="text-uppercase text-primary text-center">SON GOKU TRỞ LẠI VỚI THIẾT KẾ GA-110JDB-1A4</h2>
+    <h2 class="text-uppercase text-primary text-center">{{$Page->title3}}</h2>
 
     <div class="container">
 
@@ -328,7 +136,7 @@
 
 @endif
 <div id="specification">
-    <h2 class="text-uppercase text-center text-primary my-3">THÔNG SỐ KỸ THUẬT</h2>
+    <h2 class="text-uppercase text-center text-primary my-3">{{$Page->title4}}</h2>
     <div class="container">
         <ul class="nav nav-pills m-t-30 justify-content-center m-b-30 my-4">
             @foreach($products as $product)
@@ -519,18 +327,18 @@
 @section('extra_scripts')
 
 <script>
-    let modal = document.getElementById("myModal");
-    let btn = document.getElementById("myBtn");
-    let span = document.getElementsByClassName("modal-guide-close")[0];
-    btn.onclick = function () {
+    const showButton = (id) => {
+        let modal = document.getElementById("myModal"+id);
+        let btn = document.getElementById("myBtn"+id);
+        let span = document.getElementById("closeModal"+id);
         modal.style.display = "block";
-    }
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-    window.onclick = function (event) {
-        if (event.target == modal) {
+        span.onclick = function () {
             modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
     }
 </script>
