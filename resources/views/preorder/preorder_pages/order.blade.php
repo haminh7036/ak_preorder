@@ -50,7 +50,7 @@
                                         <span class="font-weight-normal text-danger">(Chỉ áp dụng cho khách hàng đã cọc)</span>
 
                                     @endif
-
+                                        <span class="font-weight-normal text-danger">Ưu tiên cho khách thanh toán 100% giá trị sản phẩm.</span>
                                 </td>
                             </tr>
                             @if(!empty($product->Gift))
