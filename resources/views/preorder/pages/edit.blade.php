@@ -15,6 +15,24 @@
                 </div>
             <div class="form-group">
 
+                <label>Keywords :</label>
+                <input class="form-control" type="text" value="{{$page->keywords}}" name="keywords">
+
+            </div>
+            <div class="form-group">
+
+                <label>Title :</label>
+                <input class="form-control" type="text" value="{{$page->title}}" name="title">
+
+            </div
+            ><div class="form-group">
+
+                <label>Description :</label>
+                <input class="form-control" type="text" value="{{$page->description}}" name="description">
+
+            </div>
+            <div class="form-group">
+
                 <label>Big Banner :</label>
                 <input class='form-group' type="file" name="big_banner">
 

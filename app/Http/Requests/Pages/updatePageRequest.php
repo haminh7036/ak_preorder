@@ -24,7 +24,7 @@ class updatePageRequest extends FormRequest
     public function rules()
     {
         return [
-            'big_banner'=>'required',
+            'big_banner'=>'sometimes',
         ];
     }
 }

@@ -9,6 +9,33 @@
 
             <h2 class="card-title">{{$page->name_page}}</h2>
             <hr>
+            <h2>
+                Keywords :
+            </h2>
+            @if(!empty($page->keywords))
+                {{$page->keywords}}
+            @else
+                <b class="text-purple" >Keywords hiện tại đang trống</b>
+            @endif
+            <hr>
+            <h2>
+                Title :
+            </h2>
+            @if(!empty($page->title))
+                {{$page->title}}
+            @else
+                <b class="text-purple" >Title hiện tại đang trống</b>
+            @endif
+            <hr>
+            <h2>
+                Description :
+            </h2>
+            @if(!empty($page->description))
+                {{$page->description}}
+            @else
+                <b class="text-purple" >Description hiện tại đang trống</b>
+            @endif
+            <hr>
             <h2 class="card-title">
                 Big Banner
             </h2>

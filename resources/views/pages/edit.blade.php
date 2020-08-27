@@ -39,7 +39,24 @@
 
             </div>
         </div>
+        <div class="form-group">
 
+            <label>Keywords :</label>
+            <input class="form-control" type="text" value="{{$data->keywords}}" name="keywords">
+
+        </div>
+        <div class="form-group">
+
+            <label>Title :</label>
+            <input class="form-control" type="text" value="{{$data->title}}" name="title">
+
+        </div
+        ><div class="form-group">
+
+            <label>Description :</label>
+            <input class="form-control" type="text" value="{{$data->description}}" name="description">
+
+        </div>
 
         <label for="big_banner" class="col-sm-12 col-form-label">
             @lang('validation.attributes.big_banner')

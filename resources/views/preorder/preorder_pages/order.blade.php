@@ -1,6 +1,10 @@
 @extends('layouts.app')
+@section('meta')
+    <meta name="keywords" content="{{$product->Page->keywords}}">
+    <meta property="og:title" content="{{$product->Page->title}}">
+    <meta property="og:description" content="{{$product->Page->description}}">
+@endsection
 @section('content')
-
     <div id="order" class="my-4">
         <h1 class="text-center text-uppercase">
             {{$product->Product_Name}}

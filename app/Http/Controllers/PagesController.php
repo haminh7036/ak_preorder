@@ -62,7 +62,7 @@ class PagesController extends Controller
     }
 
     public function edit($id){
-        $data= LandingPage::select('big_banner')->find($id);
+        $data= LandingPage::select('big_banner','keywords', 'title','description')->find($id);
         $data['discount']= Discount::all()->where('activeall', 1);
         $breadcrumbs = [
             'title' => __('layouts_admin.navigation.pages'),
@@ -80,21 +80,27 @@ class PagesController extends Controller
     protected function update(updatePageRequest $request,$id){
         $request->validated();
         $data = LandingPage::findorFail($id);
-        if(Storage::exists($data->big_banner)) {
-            Storage::delete($data->big_banner);
-        }
         if($request->hasFile('big_banner')) {
+            if(Storage::exists($data->big_banner)) {
+                Storage::delete($data->big_banner);
+            }
             $file = $request->big_banner;
             $filename = $file->store('photos/big_banner','public');
             if(!empty($request['discount_id'])){
                 LandingPage::findorFail($id)->update([
                     'big_banner' => $filename,
-                    'discount_id' => $request['discount_id']
+                    'discount_id' => $request['discount_id'],
+                    'keywords' => $request['keywords'],
+                    'title' => $request['title'],
+                    'description' => $request['description']
                 ]);
             }
             else{
                 LandingPage::findorFail($id)->update([
                     'big_banner' => $filename,
+                    'keywords' => $request['keywords'],
+                    'title' => $request['title'],
+                    'description' => $request['description']
                 ]);
             }
 
@@ -103,11 +109,19 @@ class PagesController extends Controller
             $frame = $request->big_banner;
             LandingPage::findorFail($id)->update([
                 'big_banner' => $frame,
-                'discount_id' => $request['discount_id']
+                'discount_id' => $request['discount_id'],
+                'keywords' => $request['keywords'],
+                'title' => $request['title'],
+                'description' => $request['description']
             ]);
             Session::flash('flash_message', __('validation.flash_messages.slide-image.created'));
         }
         else{
+            LandingPage::findorFail($id)->update([
+                'keywords' => $request['keywords'],
+                'title' => $request['title'],
+                'description' => $request['description']
+            ]);
             Session::flash('flash_message', __('validation.flash_messages.slide-image.cant_delete'));
         }
 
