@@ -111,7 +111,7 @@
                 height: 600px;
             }
         </style>
-        <h2 class="text-uppercase text-center text-primary my-3">{{$Page->title2}}/h2>
+        <h2 class="text-uppercase text-center text-primary my-3">{{$Page->title2}}</h2>
         <div class="text-center" id="iframe-present">
             {!! $Page->iframe !!}
         </div>
