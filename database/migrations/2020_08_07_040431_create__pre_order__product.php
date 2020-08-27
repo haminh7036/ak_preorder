@@ -20,7 +20,7 @@ class CreatePreOrderProduct extends Migration
             $table->longText('bodyhtml')->nullable();
             $table->text('iframe')->nullable();
         });
-        Schema::create('Preorder_products', function (Blueprint $table)
+        Schema::create('preorder_products', function (Blueprint $table)
         {
             $table->increments('id');
             $table->timestamp('created_at')->nullable();

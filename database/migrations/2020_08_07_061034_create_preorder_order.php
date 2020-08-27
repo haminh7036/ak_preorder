@@ -13,7 +13,7 @@ class CreatePreorderOrder extends Migration
      */
     public function up()
     {
-        Schema::create('Preorder_orders', function (Blueprint $table)
+        Schema::create('preorder_orders', function (Blueprint $table)
         {
             $table->increments('id');
             $table->timestamp('created_at')->nullable();
@@ -38,6 +38,6 @@ class CreatePreorderOrder extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Preorder_orders');
+        Schema::dropIfExists('preorder_orders');
     }
 }

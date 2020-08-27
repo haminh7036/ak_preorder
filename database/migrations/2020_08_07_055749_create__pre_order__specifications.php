@@ -13,7 +13,7 @@ class CreatePreOrderSpecifications extends Migration
      */
     public function up()
     {
-        Schema::create('Preorder_specifications', function (Blueprint $table)
+        Schema::create('preorder_specifications', function (Blueprint $table)
         {
             $table->increments('id');
             $table->timestamp('created_at')->nullable();
@@ -43,6 +43,6 @@ class CreatePreOrderSpecifications extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Preorder_specifications');
+        Schema::dropIfExists('preorder_specifications');
     }
 }

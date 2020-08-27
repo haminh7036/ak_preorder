@@ -13,7 +13,7 @@ class CreatePreOrderProductImages extends Migration
      */
     public function up()
     {
-        Schema::create('Preorder_images', function (Blueprint $table)
+        Schema::create('preorder_images', function (Blueprint $table)
         {
             $table->increments('id');
             $table->timestamp('created_at')->nullable();
@@ -29,6 +29,6 @@ class CreatePreOrderProductImages extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Preorder_images');
+        Schema::dropIfExists('preorder_images');
     }
 }

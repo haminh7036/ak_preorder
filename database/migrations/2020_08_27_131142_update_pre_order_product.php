@@ -14,7 +14,7 @@ class UpdatePreOrderProduct extends Migration
     public function up()
     {
         //
-        Schema::table('Preorder_products', function (Blueprint $table) {
+        Schema::table('preorder_products', function (Blueprint $table) {
             $table->text('order_guide')->nullable();
         });
 
@@ -28,7 +28,7 @@ class UpdatePreOrderProduct extends Migration
     public function down()
     {
         //
-        Schema::table('Preorder_products', function (Blueprint $table) {
+        Schema::table('preorder_products', function (Blueprint $table) {
             $table->dropColumn('order_guide');
         });
     }
