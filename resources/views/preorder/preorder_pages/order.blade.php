@@ -50,7 +50,6 @@
                                         <span class="font-weight-normal text-danger">(Chỉ áp dụng cho khách hàng đã cọc)</span>
 
                                     @endif
-                                        <span class="font-weight-normal text-danger">Ưu tiên cho khách thanh toán 100% giá trị sản phẩm.</span>
                                 </td>
                             </tr>
                             @if(!empty($product->Gift))
@@ -78,7 +77,11 @@
                                 <td width="25%" class="text-right h4 font-weight-normal ">Tiền cọc</td>
                                 <td class="pl-3">
                                     <span class="text-danger h4 font-weight-normal">{{number_format($product->Deposit)}}<sup>đ</sup></span>
+                                    <br>
+                                    <span class="font-weight-normal text-danger">Ưu tiên cho khách thanh toán 100% giá trị sản phẩm.</span>
+
                                 </td>
+
                             </tr>
                             <tr>
                                 <td width="25%" ></td>
