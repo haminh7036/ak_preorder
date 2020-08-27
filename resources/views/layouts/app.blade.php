@@ -4,10 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="Shop Casio Online Ủy Quyền Tại Việt Nam, các sản phầm đồng hồ Casio G-Shock, Baby-G, Edifice, Sheen.. chính hãng tại Anh Khuê Sài Gòn, bảo hành từ 1 đến 5 năm.">
-    <meta name="keywords" content="đồng hồ casio">
     <meta name="news_keywords" content="đồng hồ casio">
     <meta name="author" content="Shop Đồng Hồ Casio Online Ủy Quyền Tại Việt Nam">
     <meta name="copyright" content="Shop Đồng Hồ Casio Online Ủy Quyền Tại Việt Nam [online@anhkhuesaigon.com.vn]">
@@ -17,9 +15,7 @@
     <meta name="generator" content="vndes.net">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta property="og:title" content="Shop Đồng Hồ Casio Online Ủy Quyền Tại Việt Nam">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Shop Casio Online Ủy Quyền Tại Việt Nam, các sản phầm đồng hồ Casio G-Shock, Baby-G, Edifice, Sheen.. chính hãng tại Anh Khuê Sài Gòn, bảo hành từ 1 đến 5 năm.">
+    @yield('meta')
     <meta property="og:site_name" content="Shop Đồng Hồ Casio Online Ủy Quyền Tại Việt Nam">
     <meta property="og:url" content="https://casio.anhkhue.com/index.php/">
     <meta property="fb:app_id" content="330368240904484">

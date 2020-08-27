@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('meta')
+    <meta name="keywords" content="{{$landing_page->keywords}}">
+    <meta property="og:title" content="{{$landing_page->title}}">
+    <meta property="og:description" content="{{$landing_page->description}}">
+@endsection
 @section('content')
 
     @if($landing_page->type=='image')

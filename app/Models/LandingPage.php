@@ -8,7 +8,7 @@ class LandingPage extends Model
 {
 
     protected $fillable = [
-        'big_banner','discount_id'
+        'big_banner','discount_id','keywords', 'title','description'
     ];
 
     public function images(){

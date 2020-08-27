@@ -21,7 +21,6 @@ class PreorderProduct extends Model
         return $this->hasMany(PreorderOrder::class);
     }
     public function Page(){
-        return $this->belongsTo(PreorderPage::class);
+        return $this->belongsTo(PreorderPage::class,'preorder_page_id');
     }
-
 }

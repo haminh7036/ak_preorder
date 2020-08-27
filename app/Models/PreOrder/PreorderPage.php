@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class PreorderPage extends Model
 {
 
-    protected $fillable =[ 'name_page' , 'bodyhtml' , 'iframe', 'title1', 'title2', 'title3', 'title4', 'big_banner'];
+    protected $fillable =[ 'name_page' , 'bodyhtml' , 'iframe', 'title1', 'title2', 'title3', 'title4', 'big_banner','keywords', 'title','description'];
 
     public function Product(){
         return $this->hasMany(PreorderProduct::class);
