@@ -12,7 +12,7 @@
             <h2 class="card-title">
                 Big Banner
             </h2>
-            <img src="{{asset('storage/'.$page->big_banner)}}" alt="dumbass">
+            <img src="{{asset('storage/'.$page->big_banner)}}">
             <hr>
             <h2 class="card-title">
                 Iframe

@@ -15,7 +15,7 @@
                 </div>
             <div class="form-group">
 
-                <label>Title 2:</label>
+                <label>Big Banner :</label>
                 <input class='form-group' type="file" name="big_banner">
 
 
