@@ -105,7 +105,7 @@
                                         <br>
                                         {!! $errors->first('Phone_Number', '<p class="d-inline text-danger">Vui lòng nhập số điện thoại </p>')!!}
                                         <div class="form-group" style="width:60%">
-                                            <textarea class="mt-2 form-control"  name="Other_request" placeholder="Yêu cầu khác (Không bắt buộc)" rows="3"></textarea>
+                                            <textarea class="mt-2 form-control"  name="Other_request" placeholder="Địa chỉ nhận hàng" rows="3"></textarea>
                                         </div>
                                     </div>
                                 </td>
